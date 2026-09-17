@@ -1,5 +1,10 @@
 [phases.setup]
 nixPkgs = ["python311", "gcc"]
 
+[phases.build]
+# Perintah untuk menginstal dependensi Python
+cmds = ["pip install -r requirements.txt"]
+
 [start]
+# Perintah untuk menjalankan aplikasi
 cmd = "gunicorn app:app"
