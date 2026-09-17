@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Kontak — {{ company_name }}{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="section-kicker">Kontak</div>
+        <h1 class="section-title mb-4">Sampaikan kebutuhan dan pertanyaan Anda.</h1>
+
+        <div class="row g-4">
+            <!-- FORM -->
+            <div class="col-lg-7">
+                <div class="card-custom">
+                    <h4 class="fw-bold mb-4">Kirim Pesan</h4>
+                    <form action="{{ url_for('contact') }}" method="POST" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nama" class="form-label">Nama Lengkap <span class="text-danger">*</span></label>
+                                <input type="text" id="nama" name="nama" class="form-control"
+                                       value="{{ form_data.nama if form_data else '' }}" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                <input type="email" id="email" name="email" class="form-control"
+                                       value="{{ form_data.email if form_data else '' }}" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="telepon" class="form-label">No. Telepon</label>
+                                <input type="tel" id="telepon" name="telepon" class="form-control"
+                                       value="{{ form_data.telepon if form_data else '' }}">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="subjek" class="form-label">Subjek</label>
+                                <input type="text" id="subjek" name="subjek" class="form-control"
+                                       value="{{ form_data.subjek if form_data else '' }}">
+                            </div>
+                            <div class="col-12">
+                                <label for="pesan" class="form-label">Pesan <span class="text-danger">*</span></label>
+                                <textarea id="pesan" name="pesan" rows="5" class="form-control" required>{{ form_data.pesan if form_data else '' }}</textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-brand">
+                                    <i class="bi bi-send me-2"></i>Kirim Pesan
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- INFO -->
+            <div class="col-lg-5">
+                <div class="card-custom mb-3">
+                    <h6 class="fw-bold"><i class="bi bi-whatsapp me-2" style="color: var(--teal);"></i>WhatsApp</h6>
+                    <p class="mb-2">{{ company_whatsapp_display }}</p>
+                    <a href="https://wa.me/{{ company_whatsapp }}" target="_blank" class="small">Buka WhatsApp <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+                <div class="card-custom mb-3">
+                    <h6 class="fw-bold"><i class="bi bi-instagram me-2" style="color: var(--teal);"></i>Instagram</h6>
+                    <p class="mb-2">@{{ company_instagram }}</p>
+                    <a href="https://instagram.com/{{ company_instagram }}" target="_blank" class="small">Buka Instagram <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+                <div class="card-custom">
+                    <h6 class="fw-bold"><i class="bi bi-geo-alt me-2" style="color: var(--teal);"></i>Lokasi</h6>
+                    <p class="mb-0">{{ company_location }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

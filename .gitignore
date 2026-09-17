@@ -1,0 +1,48 @@
+# ===== PYTHON =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ===== VIRTUAL ENVIRONMENT =====
+venv/
+env/
+ENV/
+.venv/
+
+# ===== ENVIRONMENT VARIABLES =====
+.env
+.env.local
+
+# ===== DATA PRIBADI (jangan upload ke Git) =====
+data/messages.json
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== LOGS =====
+*.log

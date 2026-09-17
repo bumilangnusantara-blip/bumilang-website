@@ -1,0 +1,211 @@
+/* ================================================
+   PT Bumilang Tanjung Nusantara — Custom CSS
+   ================================================ */
+
+:root {
+    --ink: #0b1f3a;
+    --teal: #20b8a6;
+    --teal-deep: #087d78;
+    --gold: #d6a23a;
+    --paper: #f6f3eb;
+    --muted: #617087;
+}
+
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+a { color: var(--teal-deep); text-decoration: none; }
+a:hover { color: var(--teal); }
+
+/* ===== NAVBAR ===== */
+.site-nav {
+    background: var(--ink);
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.navbar-logo {
+    height: 55px;
+    width: auto;
+}
+.site-nav .nav-link {
+    color: rgba(255,255,255,0.8) !important;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 0.6rem 0.9rem !important;
+    transition: color 0.2s;
+}
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+    color: var(--teal) !important;
+}
+.site-nav .navbar-toggler {
+    border-color: rgba(255,255,255,0.3);
+}
+.site-nav .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ===== BUTTONS ===== */
+.btn-brand {
+    background: var(--teal);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+.btn-brand:hover {
+    background: var(--teal-deep);
+    color: white;
+    transform: translateY(-2px);
+}
+.btn-outline-brand {
+    background: transparent;
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    padding: 0.7rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+.btn-outline-brand:hover {
+    background: var(--ink);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.75);
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+}
+.footer a {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.92rem;
+}
+.footer a:hover {
+    color: var(--teal);
+}
+.footer h6 {
+    color: white;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    margin-bottom: 1rem;
+}
+.footer-logo {
+    max-width: 140px;
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    background: #25d366;
+    color: white !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+    z-index: 1000;
+    transition: transform 0.2s;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* ===== SECTION ===== */
+.section {
+    padding: 3.5rem 0;
+}
+.section-title {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+.section-kicker {
+    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+}
+
+/* ===== CARD ===== */
+.card-custom {
+    background: white;
+    border: 1px solid rgba(11,31,58,0.08);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: 100%;
+    transition: all 0.2s;
+}
+.card-custom:hover {
+    box-shadow: 0 12px 30px rgba(11,31,58,0.1);
+    transform: translateY(-4px);
+}
+
+/* ===== FORM ===== */
+.form-control, .form-select {
+    border: 1px solid rgba(11,31,58,0.15);
+    border-radius: 0.6rem;
+    padding: 0.7rem 1rem;
+}
+.form-control:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 0.2rem rgba(32,184,166,0.15);
+}
+.form-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--ink);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+    .site-nav .navbar-collapse {
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        margin-top: 0.5rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
