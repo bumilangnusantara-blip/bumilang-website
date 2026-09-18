@@ -209,3 +209,28 @@ a:hover { color: var(--teal); }
         text-align: center;
     }
 }
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    width: 44px;
+    height: 44px;
+    background: var(--ink);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+}
+.back-to-top.show {
+    display: flex;
+}
+.back-to-top:hover {
+    transform: translateY(-3px);
+}
